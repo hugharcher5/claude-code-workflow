@@ -34,8 +34,9 @@ My personal kit is at \`${REPO_DIR}\`.
 - For old personal work, read the kit journal and memory index first
   (compiled/journal.md, compiled/MEMORY.md).
 - Use Sonnet 5 normally. For genuinely difficult reasoning, architecture,
-  security, or a large build, recommend Opus 5 once and wait
-  (see .claude/skills/model-router/).
+  security, or a large build, auto-delegate to an Opus 5 subagent (Code
+  can't switch its own running model, so a subagent is how the upgrade
+  happens) (see .claude/skills/model-router/).
 - Before frontend/design work, load ui-ux-pro-max. For user-facing prose,
   apply humanizer, still inside the 75-word rule unless released.
 - Before spend, hiring, firing, new product, or keep/kill decisions, offer
