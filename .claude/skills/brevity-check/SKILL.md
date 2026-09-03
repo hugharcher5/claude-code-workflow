@@ -13,3 +13,7 @@ Rules live in `rewire/voice.md` — this skill is the operational summary.
 - Applies in Claude Desktop and in plain terminal conversation in Claude Code, not just task work.
 - Courtroom mode (`courtroom-mode`) releases the cap for the duration of that run only.
 - Humanizer governs how the prose reads; this skill governs how much of it there is — apply both together to user-facing prose.
+
+## Hard enforcement (Claude Code)
+
+This is not just a prompt instruction — in Claude Code it's backed by a real Stop hook: `scripts/enforce_brevity.py`, wired into `~/.claude/settings.json`. After every response it checks the word count, skips code/tool-use blocks, and blocks the turn (forcing a rewrite) if the cap was missed with no release trigger and no active courtroom run. It only retries once per turn — it won't loop forever if a true answer can't fit. Claude Desktop has no hook system, so this enforcement exists in Code only; see `desktop/personal-operator/SKILL.md` for the honest Desktop-side limitation.
