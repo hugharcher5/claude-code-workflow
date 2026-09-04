@@ -4,7 +4,7 @@ A portable personal kit for Claude Code and Claude Desktop: one voice, one memor
 
 ## What this is
 
-Ten always-on behaviors — 75-word voice, a reviewed memory compiler, learning from corrections, sources on request, memory lint, safe secret handling, UI/UX Pro Max, Humanizer, courtroom decision mode, and Sonnet/Opus model routing — implemented once here and reused everywhere.
+Eleven always-on behaviors — 75-word voice, a reviewed memory compiler, learning from corrections, sources on request, memory lint, safe secret handling, UI/UX Pro Max, Humanizer, courtroom decision mode, Sonnet/Opus model routing, and a plan-first coding gate — implemented once here and reused everywhere.
 
 ## The split
 

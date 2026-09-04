@@ -11,7 +11,7 @@ This file governs work done *inside this repo* (maintaining the kit itself). The
 - Never put project-specific secrets or database credentials here. Those belong in that project's own `.env` and project-local skill/router — see `compiled/decisions/` only if a boundary decision about this needs recording.
 - Vendor skills (`.claude/skills/humanizer/`, `.claude/skills/ui-ux-pro-max/`) are copied in unmodified from upstream. Personal routing rules for them live in `.claude/skills/model-router/` and `~/.claude/CLAUDE.md`, not inside the vendor files, so upstream updates never conflict with personal rules.
 
-## The ten features
+## The eleven features
 
 1. 75-word voice — `rewire/voice.md`, `.claude/skills/brevity-check/`
 2. Memory compiler — `scripts/compile_memory.py`, `.claude/skills/memory-compiler/`
@@ -23,5 +23,6 @@ This file governs work done *inside this repo* (maintaining the kit itself). The
 8. Humanizer — `.claude/skills/humanizer/` (vendor, unmodified)
 9. Courtroom — `.claude/skills/courtroom-mode/`, records under `compiled/courtroom/`
 10. Model recommendation — `.claude/skills/model-router/`
+11. Coding gate — `rewire/coding-gate.md`, `.claude/skills/coding-gate/`, hard-enforced via `scripts/enforce_coding_gate.py`
 
 Supabase and Hermes are intentionally omitted from this kit.
