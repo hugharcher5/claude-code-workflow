@@ -4,7 +4,7 @@ A portable personal kit for Claude Code and Claude Desktop: one voice, one memor
 
 ## What this is
 
-Twelve features, implemented once here and reused in every project:
+Eleven always-on behaviours, implemented once here and reused in every project:
 
 1. **75-word voice.** Replies stay short and plain unless you ask for detail, enforced by a hook rather than a polite request.
 2. **Plan-first coding gate.** Claude lays out its plan and waits for a go-ahead before editing files, also enforced by a hook.
@@ -17,7 +17,8 @@ Twelve features, implemented once here and reused in every project:
 9. **Humanizer.** Rewrites user-facing text to remove the usual signs of AI writing.
 10. **Courtroom decision mode.** For spend, hiring or keep/kill decisions, four isolated sub-agents argue it out: Believer, Sceptic, Financial and Judge.
 11. **Model routing.** Everyday work runs on Sonnet; hard architecture, security or large builds get handed to an Opus sub-agent.
-12. **Claude Desktop companion.** A reduced skill that brings the same voice and decision habits to Claude Desktop, and routes anything needing local files back to Claude Code.
+
+There is also a reduced **Claude Desktop companion skill** that brings the same voice and decision habits to Claude Desktop, and routes anything needing local files back to Claude Code.
 
 ## The split
 
