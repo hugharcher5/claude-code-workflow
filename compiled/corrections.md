@@ -13,3 +13,5 @@ On recurrence, increment `seen` on the existing line rather than adding a new on
 Empty at kit creation.
 - [2026-09-03] [source: User] Automated rules (like the 75-word cap) must be enforced with real code (hooks) wherever the platform allows it, not left as prompt-only instructions the model can ignore; when a platform genuinely has no enforcement mechanism (e.g. Claude Desktop skills), say so plainly instead of presenting it as a guarantee. (seen: 1)
 - [2026-09-03] [source: User] Don't push rotation/security nagging on low-stakes personal API keys once the user says they don't care if it leaks — flag exposure once, then drop it if waved off. (seen: 1)
+- [2026-10-05] [source: User] When giving text for the user to paste elsewhere (e.g. prompts for ChatGPT), never use markdown blockquotes (>) — they copy as stray bars/line breaks. Use plain text or a fenced code block. (seen: 1)
+- [2026-10-06] [source: User] In written documents, don't build sentences with a long compound subject wrapped around an aside (e.g. "The other two interns, whom I will call X and Y, and I learned..."); split into short, plainly ordered sentences. (seen: 1)

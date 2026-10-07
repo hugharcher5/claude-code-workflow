@@ -4,7 +4,20 @@ A portable personal kit for Claude Code and Claude Desktop: one voice, one memor
 
 ## What this is
 
-Eleven always-on behaviors — 75-word voice, a reviewed memory compiler, learning from corrections, sources on request, memory lint, safe secret handling, UI/UX Pro Max, Humanizer, courtroom decision mode, Sonnet/Opus model routing, and a plan-first coding gate — implemented once here and reused everywhere.
+Twelve features, implemented once here and reused in every project:
+
+1. **75-word voice.** Replies stay short and plain unless you ask for detail, enforced by a hook rather than a polite request.
+2. **Plan-first coding gate.** Claude lays out its plan and waits for a go-ahead before editing files, also enforced by a hook.
+3. **Reviewed memory compiler.** Turns raw exports and the journal into candidate memory that you accept as a diff before it's trusted.
+4. **Memory lint.** Checks compiled memory for broken links, secrets and junk before anything relies on it.
+5. **Learning from corrections.** When you correct Claude, the rule is logged quietly and counted, so repeats are caught.
+6. **Sources on request.** Claude keeps a private source list and shows it only when you ask.
+7. **Safe secret handling.** A silent-prompt script installs API keys into a project's `.env` without echoing, logging or storing them here.
+8. **UI/UX Pro Max.** A searchable design library (styles, palettes, fonts, UX rules) loaded before any frontend work.
+9. **Humanizer.** Rewrites user-facing text to remove the usual signs of AI writing.
+10. **Courtroom decision mode.** For spend, hiring or keep/kill decisions, four isolated sub-agents argue it out: Believer, Sceptic, Financial and Judge.
+11. **Model routing.** Everyday work runs on Sonnet; hard architecture, security or large builds get handed to an Opus sub-agent.
+12. **Claude Desktop companion.** A reduced skill that brings the same voice and decision habits to Claude Desktop, and routes anything needing local files back to Claude Code.
 
 ## The split
 
@@ -35,3 +48,7 @@ Zip `desktop/personal-operator/` and upload under **Customize → Skills**, enab
 ## Secrets
 
 Never stored here. See `.env.example` and `scripts/set_secret.sh`. Project databases (e.g. a future Supabase project) are configured per-project, not in this kit.
+
+## Credits
+
+UI/UX Pro Max is by Next Level Builder and Humanizer is by Siqi Chen. Both are included unmodified under their licences (see the `LICENSE` file in each skill folder).
