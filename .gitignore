@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+raw/**
+!raw/.gitkeep
+__pycache__/
+*.py[cod]
+.venv/
+*.zip
+.DS_Store
+
+# Personal memory stays local. Blank templates live in templates/compiled/
+# and are copied into compiled/ by scripts/install_global.sh on first run.
+compiled/
