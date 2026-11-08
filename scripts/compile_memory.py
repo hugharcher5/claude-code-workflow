@@ -190,6 +190,9 @@ def call_anthropic(api_key: str, model: str, source_material: str) -> dict:
     return json.loads(text)
 
 
+SAFE_SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
+
+
 def candidate_has_secret(candidate: dict) -> bool:
     blob = json.dumps(candidate)
     return any(pattern.search(blob) for _, pattern in SECRET_PATTERNS)
@@ -209,7 +212,16 @@ def build_diffs(candidates: dict) -> dict[Path, tuple[str, str]]:
             if candidate_has_secret(item):
                 print(f"dropped candidate (secret-shaped content): {item.get('slug')}")
                 continue
-            target = COMPILED / category / f"{item['slug']}.md"
+            slug = item.get("slug")
+            # The slug comes from the model, which reads untrusted transcripts, so it
+            # must be a plain kebab name: no slashes, dots or traversal out of compiled/.
+            if not isinstance(slug, str) or not SAFE_SLUG.fullmatch(slug):
+                print(f"dropped candidate (unsafe slug): {slug!r}")
+                continue
+            target = COMPILED / category / f"{slug}.md"
+            if target.resolve().parent != (COMPILED / category).resolve():
+                print(f"dropped candidate (path outside compiled/): {slug!r}")
+                continue
             before = target.read_text(encoding="utf-8") if target.exists() else ""
             addition = render_entry(item, category)
             after = before + (("\n" if before and not before.endswith("\n") else "") + addition)
