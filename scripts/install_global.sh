@@ -50,6 +50,8 @@ My personal kit is at \`${REPO_DIR}\`.
   courtroom mode once; do not start until I say yes.
 - When a project needs external data, check the public-apis list first
   (see .claude/skills/public-apis/).
+- Before reading a PDF, Office file, web page or YouTube link, convert it
+  to Markdown with markitdown (see .claude/skills/markitdown/).
 - Project-specific CLAUDE.md instructions override these general
   preferences when they concern that project's code or commands.
 EOF

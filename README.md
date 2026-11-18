@@ -29,7 +29,7 @@ I built it because I run a day job, a startup, my own ventures and a job search 
 | **Google Calendar** | Schedules and deadlines alongside tasks. |
 | **Claude Docs** | Shareable living documents when something needs to be written up properly. |
 
-## The twelve features
+## The thirteen features
 
 These are implemented once here and used in every project.
 
@@ -45,6 +45,7 @@ These are implemented once here and used in every project.
 10. **Courtroom decision mode.** For decisions about spending, hiring, product or keep/kill, four isolated sub-agents argue the case. The Believer and Sceptic make opposing cases, the Financial agent runs the numbers, and the Judge sees only their briefs before ruling. Verdicts come with conditions and are saved as records.
 11. **Model routing.** Everyday work runs on a fast model. Hard architecture, security, high-stakes decisions and large builds are handed automatically to a stronger model running as a sub-agent.
 12. **Public APIs for data.** When a project needs data (market prices, fundamentals, macro, weather), Claude checks the [public-apis](https://github.com/public-apis/public-apis) catalogue first and prefers free or no-key APIs over scrapers or paid feeds.
+13. **MarkItDown.** Before reading a PDF, Office file, web page or YouTube link, Claude converts it to Markdown with Microsoft's [markitdown](https://github.com/microsoft/markitdown), which is easier for AI to read. It runs from its own pinned install, only on files I point it at, with third-party plugins off.
 
 There is also a reduced **Claude Desktop companion skill**. It brings the same voice and decision habits to Claude Desktop and sends anything that needs local files back to Claude Code.
 
